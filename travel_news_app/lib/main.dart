@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_news_app/hashtag_data.dart';
+import 'package:travel_news_app/places_json.dart';
 import 'app_styles.dart';
 import 'size_config.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -215,7 +216,7 @@ class HomeScreen extends StatelessWidget {
             height: 304,
             child: ListView.builder(
               shrinkWrap: true,
-              itemCount: 10,
+              itemCount: placesitems.length, //sets count to the list quantity
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return Container(
@@ -243,10 +244,10 @@ class HomeScreen extends StatelessWidget {
                         height: 164,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(kBorderRadius),
-                          image: const DecorationImage(
+                          image: DecorationImage(
                             fit: BoxFit.cover,
                             image: NetworkImage(
-                              'https://a.cdn-hotels.com/gdcs/production143/d1112/c4fedab1-4041-4db5-9245-97439472cf2c.jpg',
+                              placesitems[index]['placeImage'].toString(),
                             ),
                           ),
                         ),
@@ -256,7 +257,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       Flexible(
                         child: Text(
-                          'Bali - Uniqure, unmatched. There is no other place like Bali in this world.',
+                         placesitems[index]['text'],
                           style: kPoppinsBold.copyWith(
                             fontSize: SizeConfig.blockSizeHorizontal! * 3.5,
                           ),
