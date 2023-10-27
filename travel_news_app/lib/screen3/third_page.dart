@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:travel_news_app/app_styles.dart';
+import 'package:travel_news_app/screen3/popular_data.dart';
 import 'package:travel_news_app/screen3/post_data.dart';
 import 'package:travel_news_app/size_config.dart';
 
@@ -371,7 +372,7 @@ class ProfileScreen extends StatelessWidget {
                 height: 143,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 10,
+                  itemCount: popularItems.length,
                   itemBuilder: (context, index) {
                     return Container(
                       height: 143,
@@ -384,7 +385,7 @@ class ProfileScreen extends StatelessWidget {
                           kBorderRadius,
                         ),
                         child: Image.network(
-                          'https://images.unsplash.com/photo-1540202404-a2f29016b523?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3266&q=80',
+                          popularItems[index]['popPic'].toString(),
                           fit: BoxFit.cover,
                         ),
                       ),

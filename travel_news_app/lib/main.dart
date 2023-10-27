@@ -36,7 +36,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
       backgroundColor: kLighterWhite,
-      body: const ProfileScreen(),
+      body: const HomeScreen(),
         bottomNavigationBar: BottomNavigationBar(
           elevation: 0,
           type: BottomNavigationBarType.fixed,
