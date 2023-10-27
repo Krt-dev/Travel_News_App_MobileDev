@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:travel_news_app/app_styles.dart';
+import 'package:travel_news_app/main.dart';
 import 'package:travel_news_app/screen2/carou_images.dart';
 import 'package:travel_news_app/size_config.dart';
 
@@ -48,20 +49,23 @@ class NewsDetailScreen extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            height: 50,
-                            width: 50,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(
-                                kBorderRadius,
+                          InkWell(
+                             onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const MyApp()));},
+                            child: Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(
+                                  kBorderRadius,
+                                ),
+                                border: Border.all(
+                                  color: kWhite,
+                                ),
                               ),
-                              border: Border.all(
-                                color: kWhite,
+                              padding: const EdgeInsets.all(12),
+                              child: SvgPicture.asset(
+                                'assets/arrow_back_icon.svg',
                               ),
-                            ),
-                            padding: const EdgeInsets.all(12),
-                            child: SvgPicture.asset(
-                              'assets/arrow_back_icon.svg',
                             ),
                           ),
                           Container(
