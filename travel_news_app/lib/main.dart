@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:travel_news_app/hashtag_data.dart';
 import 'package:travel_news_app/places_json.dart';
+import 'package:travel_news_app/screen2/second_page.dart';
+import 'package:travel_news_app/trends_data.dart';
 import 'app_styles.dart';
 import 'size_config.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -33,7 +35,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
       backgroundColor: kLighterWhite,
-      body: const HomeScreen(),
+      body: const NewsDetailScreen(),
         bottomNavigationBar: BottomNavigationBar(
           elevation: 0,
           type: BottomNavigationBarType.fixed,
@@ -355,7 +357,7 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: 88,
             child: ListView.builder(
-              itemCount: 10,
+              itemCount: trendsItems.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return Container(
@@ -385,10 +387,10 @@ class HomeScreen extends StatelessWidget {
                         padding: const EdgeInsets.all(26),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(kBorderRadius),
-                          image: const DecorationImage(
+                          image: DecorationImage(
                             fit: BoxFit.cover,
                             image: NetworkImage(
-                              'https://homeiswhereyourbagis.com/wp-content/uploads/2019/06/lombok-mustsees-mawun-beach-drohne.jpg',
+                              trendsItems[index]['trendPic'].toString(),
                             ),
                           ),
                         ),
@@ -404,7 +406,7 @@ class HomeScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              'Top Trending Island in 2022',
+                              trendsItems[index]['trendText'],
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                               style: kPoppinsSemibold.copyWith(
