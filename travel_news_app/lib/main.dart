@@ -75,6 +75,7 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -93,15 +94,18 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-              Container(
-                height: 51,
-                width: 51,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(kBorderRadius),
-                  color: kLightBlue,
-                  image: const DecorationImage(
-                    image: NetworkImage(
-                      'https://pbs.twimg.com/media/F9Z8rZjbsAAxxTf?format=jpg&name=900x900',
+              InkWell(
+                onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfileScreen()));},
+                child: Container(
+                  height: 51,
+                  width: 51,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(kBorderRadius),
+                    color: kLightBlue,
+                    image: const DecorationImage(
+                      image: NetworkImage(
+                        'https://pbs.twimg.com/media/F9Z8rZjbsAAxxTf?format=jpg&name=900x900',
+                      ),
                     ),
                   ),
                 ),
