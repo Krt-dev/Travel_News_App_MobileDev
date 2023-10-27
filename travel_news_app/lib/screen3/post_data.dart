@@ -1,0 +1,5 @@
+final List postList = [
+  {"postType":"News:Politics","postTitle": "Fontaine Justice system is flawed","postTime":"10:45 pm","postDate":"16th May","postPic": "https://static.wikia.nocookie.net/gensin-impact/images/2/25/Opera_Epiclese.png/revision/latest/scale-to-width-down/1000?cb=20230819070828"},
+  {"postType":"Exploration:Nature","postTitle": "Must-see Fontaine Beaches","postTime":"8:26 am","postDate":"27th Aug","postPic": "https://static.wikia.nocookie.net/gensin-impact/images/d/df/Marcotte_Station.png/revision/latest/scale-to-width-down/1000?cb=20230819070632"},
+  {"postType":"Blog:Thoughts","postTitle": "I enjoy the underwater places","postTime":"3:12 pm","postDate":"5th Dec","postPic": "https://static.wikia.nocookie.net/gensin-impact/images/4/40/Thalatta_Submarine_Canyon.png/revision/latest/scale-to-width-down/1000?cb=20230819193129"}
+];

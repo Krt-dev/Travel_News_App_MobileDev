@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:travel_news_app/hashtag_data.dart';
 import 'package:travel_news_app/places_json.dart';
 import 'package:travel_news_app/screen2/second_page.dart';
+import 'package:travel_news_app/screen3/third_page.dart';
 import 'package:travel_news_app/trends_data.dart';
 import 'app_styles.dart';
 import 'size_config.dart';
@@ -35,7 +36,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
       backgroundColor: kLighterWhite,
-      body: const HomeScreen(),
+      body: const ProfileScreen(),
         bottomNavigationBar: BottomNavigationBar(
           elevation: 0,
           type: BottomNavigationBarType.fixed,
